@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import "../../../../vendor/filament/filament/resources/css/theme.css";
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+@theme {
+    --color-green: #10b981;
+    --color-danger: #ef4444;
+}
+
+
+
+@font-face {
+    font-family: 'Rabar';
+    src: url('../../../../public/css/fonts/Rabar_021.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html[dir="rtl"], body[dir="rtl"] {
+    font-family: 'Rabar', sans-serif !important;
+}
+
+html[dir="ltr"], body[dir="ltr"] {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+
+
+
+.fi-body {
+    @apply bg-gradient-to-tr from-primary-500/5 dark:from-primary-900/50 to-transparent dark:to-transparent;
+}
+
+
+
+.fi-sidebar-nav {
+    scrollbar-width: none;
+}
+
+.no-scrollbar {
+    scrollbar-width: none;
+}
+
+.fi-topbar {
+    @apply bg-white/50 dark:bg-gray-900/50 backdrop-blur-sm;
+}
+
+.fi-sidebar-item .fi-active > a {
+    @apply bg-primary-600;
+    & > svg, span {
+        @apply text-white dark:text-white
+    }
+
+    &:hover {
+        @apply bg-indigo-400;
+    }
+}
+
